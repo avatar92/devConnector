@@ -155,7 +155,7 @@ class CreateProfile extends Component {
                 <TextFieldGroup
                   type="text"
                   placeholder="Company"
-                  name="handle"
+                  name="company"
                   value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}

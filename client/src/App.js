@@ -14,6 +14,9 @@ import CreateProfile from "./component/create-profile/CreateProfile";
 import EditProfile from "./component/edit-profile/EditProfile";
 import AddExperience from "./component/add-credential/AddExperience";
 import AddEducation from "./component/add-credential/AddEducation";
+import Profiles from "./component/profiles/Profiles";
+import Profile from "./component/profile/Profile";
+import NotFound from "./component/not-found/NotFound";
 
 import store from "./store";
 
@@ -85,6 +88,9 @@ function App() {
                 component={AddEducation}
               />
             </Switch>
+            <Route exact path="/profiles" component={Profiles} />
+            <Route exact path="/profile/:handle" component={Profile} />
+            <Route exact path="/not-found" component={NotFound} />
           </div>
           <Footer />
         </div>
