@@ -17,6 +17,8 @@ import AddEducation from "./component/add-credential/AddEducation";
 import Profiles from "./component/profiles/Profiles";
 import Profile from "./component/profile/Profile";
 import NotFound from "./component/not-found/NotFound";
+import Posts from "./component/posts/Posts";
+import Post from "./component/post/Post";
 
 import store from "./store";
 
@@ -91,6 +93,12 @@ function App() {
             <Route exact path="/profiles" component={Profiles} />
             <Route exact path="/profile/:handle" component={Profile} />
             <Route exact path="/not-found" component={NotFound} />
+            <Switch>
+              <PrivateRoute exact path="/feed" component={Posts} />
+            </Switch>
+            <Switch>
+              <PrivateRoute exact path="/post/:id" component={Post} />
+            </Switch>
           </div>
           <Footer />
         </div>
